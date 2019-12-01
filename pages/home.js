@@ -1,10 +1,15 @@
 import React from "react";
-import axios from "axios";
+import styled from "styled-components";
 
 import Link from "next/link";
 import Head from "next/head";
 
 import withAnalytics from "../src/hocs/withAnalytics";
+
+const Title = styled.h1`
+  color: #069;
+  font-size: 40px;
+`;
 
 const Home = () => (
   <div>
@@ -12,7 +17,7 @@ const Home = () => (
       <title>Home</title>
     </Head>
     <img src="/static/gecko.jpg" width="200" />
-    <h1>Hello World</h1>
+    <Title>Hello World</Title>
     <Link href="/users">
       <a>Usuários</a>
     </Link>
@@ -20,10 +25,9 @@ const Home = () => (
 );
 
 Home.getInitialProps = async () => {
-// https://github.com/zeit/next.js/blob/master/errors/empty-object-getInitialProps.md
+  // https://github.com/zeit/next.js/blob/master/errors/empty-object-getInitialProps.md
 
   return { content: "not Empty" };
 };
-
 
 export default withAnalytics()(Home);
