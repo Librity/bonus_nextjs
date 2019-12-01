@@ -1,5 +1,12 @@
 # bonus_nextjs
 
+This here is basically a good template for a SSR ReactJS App. It lets us do 
+pretty much everything that Rails's views can do.
+
+We can consume an api for the Models and Controllers, or we can incorporate that 
+functionality right in this server with a wee-more tinkering. This would be a 
+good starting point for a blog or even an e-comerce app.
+
 ## SSR (NextJS) vs. CSR (CreateReactApp)
 
 Some resources I've read about the advantages and disadvantages of each:
