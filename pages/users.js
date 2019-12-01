@@ -4,6 +4,8 @@ import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 
+import withAnalytics from "../src/hocs/withAnalytics";
+
 const Users = ({ users }) => {
   return (
     <div>
@@ -32,4 +34,4 @@ Users.getInitialProps = async () => {
   return { users: response.data };
 };
 
-export default Users;
+export default withAnalytics()(Users);
